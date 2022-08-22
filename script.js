@@ -15,16 +15,31 @@ addEventListener('load', () => {
 
 /*event listener and scroll down funcvtion with conditions for scroll to top button*/
 const backToTop = document.getElementById('backToTop');
-const showOnPixel = 300;
+let YPosition = window.scrollY;
 
-const scrollContainer = () => {
-    return document.documentElement || document.body;
-};
-
-document.addEventListener("scroll", () => {
-    if(scrollContainer().scrollTop > showOnPixel) {
-        backToTop.classList.remove("hidden");
+window.addEventListener('scroll', () => {
+    if(YPosition < 300){
+        backToTop.classList.add('scrollUp--hidden')
     } else {
-        backToTop.classList.add("hidden");
-        }
+        backToTop.classList.remove('scrollUp--hidden')
+    }
+    YPosition = window.scrollY;
+    
+})
+
+
+    var app = document.getElementById('app');
+
+    var typewriter = new Typewriter(app, {
+      loop: true,
+      delay: 75,
     });
+    
+    typewriter
+      .pauseFor(2500)
+      .typeString("Hi, I'm Xavier Julian Rodriguez.")
+      .pauseFor(3000)
+      .deleteChars(32)
+      .typeString('Welcome To My Portfolio.')
+      .pauseFor(3000)
+      .start();
