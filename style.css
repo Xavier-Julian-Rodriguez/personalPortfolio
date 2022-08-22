@@ -19,8 +19,9 @@ ul li {
 }
 
 ul li:hover {
-    color:#b4b1b8;
-    background-color: #000000;
+    color:#000000;
+    box-shadow: 0px 0px 2px 2px #000000;
+    padding: .5rem;
 }
 
 a {
@@ -33,7 +34,41 @@ a {
     height: 400px;
     border-radius: 50%;
     border: solid 5px #000000;
+    animation-name: movingPhoto;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
 }
+
+@keyframes movingPhoto {
+    0% {
+        border: solid 5px #000000;
+        box-shadow: 0px 0px 12px 12px #000000;
+    }
+    20% {
+        border: solid 5px #014760;
+        box-shadow: 0px 0px 12px 12px #014760;
+    }
+    40% {
+        border: solid 5px #107e57;
+        box-shadow: 0px 0px 12px 12px #107e57;
+    }
+    60% {
+        border: solid 5px #a1ce3f;
+        box-shadow: 0px 0px 12px 12px #a1ce3f;
+    }
+    80% {
+        border: solid 5px #b4b1b8;
+        box-shadow: 0px 0px 12px 12px #b4b1b8;
+    }
+    100% {
+        border: solid 5px #ffffff;
+        box-shadow: 0px 0px 12px 12px #ffffff;
+    }
+}
+
 
 .heading {
     text-align: center;
@@ -173,7 +208,14 @@ p {
     border: solid 2px #ffffff;
     border-radius: 12px;
     margin: 2rem;
+    transition: .4s ease;
     
+}
+
+.projectThumbnails:hover {
+    box-shadow: 0px 0px 10px 10px #ffffff;
+    height: 202px;
+    width: 402px;
 }
 
 .foot {
@@ -216,4 +258,8 @@ p {
     bottom: 3rem;
     
     
+}
+
+.scrollUp--hidden {
+    display:none;
 }
