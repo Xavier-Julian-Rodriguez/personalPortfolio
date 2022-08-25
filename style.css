@@ -34,6 +34,7 @@ a {
     height: 400px;
     border-radius: 50%;
     border: solid 5px #000000;
+    box-shadow: 0px 0px 12px 12px #000000;
     animation-name: movingPhoto;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -110,6 +111,10 @@ a {
     margin: 3rem 1rem 1rem 2rem;
 }
 
+.shortbio {
+    font-size: 1.25rem;
+}
+
 h1 {
     color: #ffffff;
     font-family: 'Antic Slab', serif;
@@ -156,7 +161,7 @@ p {
     
 }
 
-.orangebackground {
+.greenbackground {
     background-color: #b4b1b8;
     font-size: 22px;
     letter-spacing: .75rem;
@@ -262,4 +267,108 @@ p {
 
 .scrollUp--hidden {
     display:none;
+}
+
+@media only screen and (max-width: 960px) {
+    .navigation {
+      text-align: center;
+      font-size: 10px;
+      padding: 0;
+    }
+
+    .secondphoto {
+        width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 955px) {
+    .navigation {
+      font-size: 8px;
+      letter-spacing: 0px;
+    }
+}
+
+    @media only screen and (max-width: 586px) {
+        .navigation {
+          font-size: 5px;
+        }
+
+        #app {
+            font-size: 25px;
+        }
+
+        .about {
+            display:inline-block;
+            text-align: center;
+            vertical-align: center;
+            
+        }
+
+        .secondphoto {
+            width: 100%;
+            position: relative;
+            top: 10px;
+            left: 70px;
+            
+        }
+
+        .bio {
+            position: relative;
+            bottom: 10px;
+            width: 50%;
+            left: 70px;
+        }
+
+  }
+
+  @media only screen and (max-width: 530px) {
+    .main {
+        width:fit-content;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    #profilePhoto {
+        width: 250px;
+        height: 250px;
+    }
+
+    .iam {
+        font-size: 1.5rem;
+    }
+
+    .coreTechnologies {
+      
+      position: relative;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      left: 1.5px;
+      
+    }
+
+    .coreletters {
+        letter-spacing: 5px;
+        
+    }
+
+    .projects {
+      position: relative;
+      text-align: center;
+      margin: auto;
+      left: 1.5px;
+    }
+
+    #backtotop {
+        display: none;
+    }
+}
+
+@media only screen and(max-width:390px){
+    .main {
+        width:fit-content;
+    }
 }
